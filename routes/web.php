@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CorredorController;
+use App\Http\Controllers\CorridaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,5 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('corredors',CorredorController::class);
+Route::resource('corridas',CorridaController::class);
